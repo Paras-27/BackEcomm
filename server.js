@@ -25,7 +25,7 @@ app.use(morgan("dev"));
 app.use(express.static(path.join(__dirname, './client/build')))
 
 //routes
-app.use('', function (req, res) {
+app.use('*', function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"))
 })
 
